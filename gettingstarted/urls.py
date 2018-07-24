@@ -1,10 +1,8 @@
 from django.conf.urls import include, url
+from django.urls import path
 
 from django.contrib import admin
 admin.autodiscover()
-
-from django.conf.urls.static import static
-from django.conf import settings
 
 import hello.views
 
@@ -13,5 +11,7 @@ import hello.views
 # url(r'^blog/', include('blog.urls')),
 
 urlpatterns = [
-    url(r'^', include('hello.urls', namespace='hello')),
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    url(r'^$', hello.views.index, name='index'),
+    url(r'^db', hello.views.db, name='db'),
+    path('admin/', admin.site.urls),
+]

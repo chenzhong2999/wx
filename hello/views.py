@@ -7,7 +7,7 @@ import os
 
 from PIL import Image
 import qrcode
-#import zbarlight
+import zbarlight
 
 
 # Create your views here.

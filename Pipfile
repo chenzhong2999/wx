@@ -16,7 +16,7 @@ antiorm=="*"
 async-timeout=="*"
 beautifulsoup4=="*"
 bs4=="*"
-certifi==2017.4.17
+certifi=="*"
 chardet=="*"
 ChatterBot=="*"
 chatterbot-corpus=="*"

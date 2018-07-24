@@ -8,6 +8,7 @@ import os
 from PIL import Image
 import qrcode
 import zbarlight
+import zbar
 
 
 # Create your views here.
@@ -92,7 +93,7 @@ def index(request):
         border=4,
     )
     if contents['alipay'] != None and contents['wechat'] != None:
-        data = 'https://weizhiapp.herokuapp.com/pay?ali=' + contents['alipay'] + '&wx=' + contents['wechat']
+        data = 'https://zhiweiapp.herokuapp.com/pay?ali=' + contents['alipay'] + '&wx=' + contents['wechat']
         qr.add_data(data)
         qr.make(fit=True)
         img = qr.make_image()

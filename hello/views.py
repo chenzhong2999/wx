@@ -92,7 +92,7 @@ def index(request):
         border=4,
     )
     if contents['alipay'] != None and contents['wechat'] != None:
-        data = 'https://heyfox.herokuapp.com/pay?ali=' + contents['alipay'] + '&wx=' + contents['wechat']
+        data = 'https://weizhiapp.herokuapp.com/pay?ali=' + contents['alipay'] + '&wx=' + contents['wechat']
         qr.add_data(data)
         qr.make(fit=True)
         img = qr.make_image()

@@ -9,8 +9,8 @@ verify_ssl = true
 django = "*"
 gunicorn = "*"
 django-heroku = "*"
-zbarlight== "*"
-Pillow == "*"
+zbarlight = "*"
+Pillow = "*"
 
 [requires]
 
